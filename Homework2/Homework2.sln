@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program1", "program1\program1.csproj", "{61D98A4F-16F8-47F6-A9E7-64A9E7F72E52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program2", "program2\program2.csproj", "{54787979-75CD-488D-A20A-E4FFC4CA7643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program3", "program3\program3.csproj", "{D15D56BA-3928-4C3C-ADF0-607593E86D9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61D98A4F-16F8-47F6-A9E7-64A9E7F72E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D98A4F-16F8-47F6-A9E7-64A9E7F72E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D98A4F-16F8-47F6-A9E7-64A9E7F72E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D98A4F-16F8-47F6-A9E7-64A9E7F72E52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54787979-75CD-488D-A20A-E4FFC4CA7643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54787979-75CD-488D-A20A-E4FFC4CA7643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54787979-75CD-488D-A20A-E4FFC4CA7643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54787979-75CD-488D-A20A-E4FFC4CA7643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D15D56BA-3928-4C3C-ADF0-607593E86D9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15D56BA-3928-4C3C-ADF0-607593E86D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15D56BA-3928-4C3C-ADF0-607593E86D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15D56BA-3928-4C3C-ADF0-607593E86D9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4071CA5-C129-41EB-94BA-6110BE31F718}
+	EndGlobalSection
+EndGlobal
