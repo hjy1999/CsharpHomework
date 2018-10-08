@@ -87,63 +87,66 @@ namespace program2
         public void ShowMenu()
         {
             Console.WriteLine("输入1:添加订单 2:删除某订单 3: 查找订单 4:显示全部订单 5:修改某项订单 ");
-            switch (Console.ReadLine())
-            {
-                case "1":
-                    {
-                        Console.WriteLine("输入名称");
-                        string A = Console.ReadLine();
-                        Console.WriteLine("输入订单号");
-                        string B = Console.ReadLine();
-                        Console.WriteLine("输入产品名称");
-                        string C = Console.ReadLine();
-                        Order way = new Order();
-                        way.AddWay(A, B, C);
-                        Console.WriteLine("输入1继续操作，输入其他结束操作");
-                        break;
-                    }
-                case "2":
-                    {
-                        Console.WriteLine("输入订单关键字");
-                        string temp = Console.ReadLine();
-                        Order way = new Order();
-                        way.RemoveWay(temp);
-                        Console.WriteLine("输入1进入订单操作，输入其他结束操作");
-                        break;
-                    }
-                case "3":
-                    {
-                        Console.WriteLine("输入订单关键字");
-                        string temp = Console.ReadLine();
-                        Order way = new Order();
-                        way.CheckWay(temp);
-                        Console.WriteLine("输入1进入订单操作，输入其他结束操作");
-                        break;
-                    }
-                case "4":
-                    {
-                        OrderDetails way = new OrderDetails();
-                        way.ShowOrder();
-                        Console.WriteLine("输入1进入订单操作，输入其他结束操作");
-                        break;
-                    }
-                case "5":
-                    {
-                        Console.WriteLine("输入需要修改的订单某一项数据");
-                        string temp1 = Console.ReadLine();
-                        Console.WriteLine("输入订单修改后的数据");
-                        string temp2 = Console.ReadLine();
-                        Order way = new Order();
-                        way.ReviseWay(temp1, temp2);
-                        Console.WriteLine("输入1进入订单操作，输入其他结束操作");
-                        break;
-                    }
-                default:
-                    {
-                        Console.WriteLine("请输入正确数字");
-                        Console.WriteLine("输入1进入订单操作，输入其他结束操作");
-                        break;
-                    }
+           
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        {
+                            Console.WriteLine("输入名称");
+                            string A = Console.ReadLine();
+                            Console.WriteLine("输入订单号");
+                            string B = Console.ReadLine();
+                            Console.WriteLine("输入产品名称");
+                            string C = Console.ReadLine();
+                            Order way = new Order();
+                            way.AddWay(A, B, C);
+                            Console.WriteLine("输入1继续操作，输入其他结束操作");
+                            break;
+                        }
+                    case "2":
+                        {
+                            Console.WriteLine("输入订单关键字");
+                            string temp = Console.ReadLine();
+                            Order way = new Order();
+                            way.RemoveWay(temp);
+                            Console.WriteLine("输入1进入订单操作，输入其他结束操作");
+                            break;
+                        }
+                    case "3":
+                        {
+                            Console.WriteLine("输入订单关键字");
+                            string temp = Console.ReadLine();
+                            Order way = new Order();
+                            way.CheckWay(temp);
+                            Console.WriteLine("输入1进入订单操作，输入其他结束操作");
+                            break;
+                        }
+                    case "4":
+                        {
+                            OrderDetails way = new OrderDetails();
+                            way.ShowOrder();
+                            Console.WriteLine("输入1进入订单操作，输入其他结束操作");
+                            break;
+                        }
+                    case "5":
+                        {
+                            Console.WriteLine("输入需要修改的订单某一项数据");
+                            string temp1 = Console.ReadLine();
+                            Order way = new Order();
+                            way.CheckWay(temp1);
+                            Console.WriteLine("输入订单修改后的数据");
+                            string temp2 = Console.ReadLine();
+                            way.ReviseWay(temp1, temp2);
+                            Console.WriteLine("输入1进入订单操作，输入其他结束操作");
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("请输入正确数字");
+                            Console.WriteLine("输入1进入订单操作，输入其他结束操作");
+                            break;
+                        
+                }
             }
         }
     }
@@ -168,7 +171,6 @@ namespace program2
             OrderService person1 = new OrderService("hjy", "1", "phone");
             OrderService person2 = new OrderService("yxl", "2", "ipad");
             Order person3 = new Order();
-            OrderDetails person4 = new OrderDetails();
             person3.ListAddWay(person1);
             person3.ListAddWay(person2);
             menu text = new menu();
