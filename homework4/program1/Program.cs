@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace program1
+namespace Homework4
 {
     using System;
     public class clockPub
@@ -17,8 +17,9 @@ namespace program1
             while (time != DateTime.Now.ToShortTimeString().ToString())
             {
                 Console.WriteLine(DateTime.Now.ToLongTimeString().ToString());
-                Console.WriteLine("时间未到,输入回车继续");
-                Console.ReadLine();
+                System.Threading.Thread.Sleep(1000);
+                //Console.WriteLine("时间未到,输入回车继续");
+                //Console.ReadLine();
             }
             clockEventer();
         }
@@ -48,7 +49,7 @@ namespace program1
             Console.WriteLine("输入设定的时间(hh:ss)");
             Gettime.SetClockTime();
             Gettime.beginEvent();
-
+            
         }
     }
 }
