@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Serialization;
+using System.Xml;
 
 namespace program1
 {
@@ -237,7 +238,7 @@ namespace program1
                 Console.WriteLine("初始没有数据");
                 Console.WriteLine("输入要保存的路径");
                 string xmlFileAdress = Console.ReadLine();
-                if (!Directory.Exists(xmlFileAdress)) { throw new MyException("没有找到地址"); }
+                if (!Directory.Exists(xmlFileAdress)) { throw new Exception("没有找到地址"); }
                 Console.WriteLine("请输入要保存的文件名");
                 string xmlFileName = Console.ReadLine();
                 StringBuilder xmlFileAddressName = new StringBuilder();
@@ -248,7 +249,7 @@ namespace program1
                 toxml.Serialize(fileCreat, data);
                 fileCreat.Close();
             }
-            catch (MyException)
+            catch (FileNotFoundException)
             {
                 Console.WriteLine("没有找到文件夹");
             }
@@ -260,7 +261,7 @@ namespace program1
             {
                 Console.WriteLine("请输入.xml文件路径");
                 string FileAdrssion = Console.ReadLine();
-                if (!Directory.Exists(FileAdrssion)) { throw new MyException("没有找到文件"); }
+                if (!Directory.Exists(FileAdrssion)) { throw new Exception("没有找到文件"); }
                 Console.WriteLine("请输入.xml文件名称");
                 string FileName = Console.ReadLine();
                 StringBuilder FileAdreeName = new StringBuilder();
@@ -268,8 +269,32 @@ namespace program1
                 FileAdreeName.Append("\\");
                 FileAdreeName.Append(FileName);
                 if (!File.Exists(FileAdreeName.ToString())) { throw new MyException("没有找到文件"); }
-                string showxml = File.ReadAllText(FileAdreeName.ToString());
-                Console.WriteLine(showxml);
+
+                XmlDocument XmlAddress = new XmlDocument();
+                XmlAddress.Load(FileAdreeName.ToString());
+                XmlNodeList order = XmlAddress.SelectNodes("//ArrayOfOrder//Order");//获取所有Order节点 ,保存在一个list里面              
+                foreach (XmlNode n in order)
+                {
+                    string Name = ((XmlElement)n).GetElementsByTagName("Name")[0].InnerText;
+                    string Clent = ((XmlElement)n).GetElementsByTagName("Clent")[0].InnerText;
+                    Order person = new Order(Name, Clent);
+                    XmlNode orderdetails = n.SelectSingleNode("Items"); //获取order里的orderDetails
+                    XmlNodeList orderDetails = orderdetails.ChildNodes;  //把orderDetails 变成list
+                    int j = 0;
+                    foreach (XmlNode m in orderDetails)
+                    {
+                        string Num = ((XmlElement)m).GetElementsByTagName("Num")[j].InnerText;
+                        string Product = ((XmlElement)m).GetElementsByTagName("Product")[j].InnerText;
+                        string Price = ((XmlElement)m).GetElementsByTagName("Price")[j].InnerText;
+                        OrderDetails person2 = new OrderDetails(Num, Product, Convert.ToDouble(Price));
+                        person.Items.Add(person2);
+                    }
+                    data.Add(person);
+                }
+            }
+            catch (DirectoryNotFoundException)
+            {
+                Console.WriteLine("文件夹地址错误");
             }
             catch (MyException)
             {
