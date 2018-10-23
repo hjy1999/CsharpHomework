@@ -10,7 +10,7 @@ namespace program1
     {
         static void Main(string[] args)
         {
-            OrderService A = new OrderService();
+            Menu Star = new Menu();
         }
     }
 }
