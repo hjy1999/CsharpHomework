@@ -12,14 +12,12 @@ namespace program1
     public class OrderService
     {
         public static List<Order> data = new List<Order>();
-
         public Order Addway(string name,string clent)
         {
             Order person = new Order(name, clent);
             data.Add(person);
             return person;
         }
-
         public bool Deleteway(string temp)
         {
             var search = data.Where(a => a.Name == temp || a.Clent == temp);
@@ -33,7 +31,6 @@ namespace program1
                 return true;
             }
         }
-
         public void Searchway(string temp)
         {
             var search = data.Where(a => a.Clent == temp || a.Name == temp);
@@ -47,7 +44,6 @@ namespace program1
                 }
             }
         }
-
         public void Showway()
         {
             if (data.Count() == 0) Console.WriteLine("订单数据为空");
@@ -65,7 +61,6 @@ namespace program1
                 }
             }
         }
-
         public IEnumerable<Order> IntoOrder(string A)
         {
             var Search = data.Where(a => a.Clent == A || a.Name == A);
@@ -79,7 +74,6 @@ namespace program1
                 return Search;
             }
         }
-
         public void IntoOrderAdd(string num,string product,double price,IEnumerable<Order>search)
         {
             OrderDetails temp = new OrderDetails(num, product, price);
@@ -88,7 +82,6 @@ namespace program1
                 n.Items.Add(temp);
             }
         }
-
         public void IntoOrderDelete(string product, IEnumerable<Order>search)
         {
             foreach (Order n in search)
@@ -100,7 +93,6 @@ namespace program1
                 }
             }
         }
-
         public void IntoOrderSearch(double minprice,double maxprice,IEnumerable<Order>search)
         { 
             foreach (Order n in search)
@@ -113,7 +105,6 @@ namespace program1
                 }
             } 
         }
-
         public void SearchAllOrder(double Temp1,double Temp2)
         {
             try
@@ -139,21 +130,12 @@ namespace program1
                 Console.WriteLine("请输入正确的价格区间");
             }
         }
-
-        public void Export()//序列化
+        public void Export(string xmlFileAdress,string xmlFileAddressName)//序列化
         {
             XmlSerializer toxml = new XmlSerializer(data.GetType());
             try
             {
-                Console.WriteLine("输入要保存的路径");
-                string xmlFileAdress = Console.ReadLine();
                 if (!Directory.Exists(xmlFileAdress)) { throw new Exception("没有找到地址"); }
-                Console.WriteLine("请输入要保存的文件名");
-                string xmlFileName = Console.ReadLine();
-                StringBuilder xmlFileAddressName = new StringBuilder();
-                xmlFileAddressName.Append(xmlFileAdress);
-                xmlFileAddressName.Append("\\");
-                xmlFileAddressName.Append(xmlFileName);
                 FileStream fileCreat = new FileStream(xmlFileAddressName.ToString(), FileMode.Create);
                 toxml.Serialize(fileCreat, data);
                 fileCreat.Close();
@@ -163,22 +145,12 @@ namespace program1
                 Console.WriteLine("没有找到文件夹");
             }
         }
-
-        public void Import()//反序列化
+        public void Import(string FileAdrssion,string FileAdreeName)//反序列化
         {
             try
-            {
-                Console.WriteLine("请输入.xml文件路径");
-                string FileAdrssion = Console.ReadLine();
+            {  
                 if (!Directory.Exists(FileAdrssion)) { throw new Exception("没有找到文件"); }
-                Console.WriteLine("请输入.xml文件名称");
-                string FileName = Console.ReadLine();
-                StringBuilder FileAdreeName = new StringBuilder();
-                FileAdreeName.Append(FileAdrssion);
-                FileAdreeName.Append("\\");
-                FileAdreeName.Append(FileName);
                 if (!File.Exists(FileAdreeName.ToString())) { throw new MyException("没有找到文件"); }
-
                 //方法 2.
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Order>));
                 FileStream fileStream = new FileStream(FileAdreeName.ToString(), FileMode.Open, FileAccess.Read);
@@ -216,7 +188,6 @@ namespace program1
             {
                 Console.WriteLine("没有找到文件,请输入正确的文件地址");
             }
-        }
-       
+        }    
     }
 }

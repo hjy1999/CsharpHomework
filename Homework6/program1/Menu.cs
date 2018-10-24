@@ -127,12 +127,28 @@ namespace program1
                             }
                         case 7:
                             {
-                                Export();
+                            Console.WriteLine("输入要保存的路径");
+                            string xmlFileAdress = Console.ReadLine();
+                            Console.WriteLine("请输入要保存的文件名");
+                            string xmlFileName = Console.ReadLine();
+                            StringBuilder xmlFileAddressName = new StringBuilder();
+                            xmlFileAddressName.Append(xmlFileAdress);
+                            xmlFileAddressName.Append("\\");
+                            xmlFileAddressName.Append(xmlFileName);
+                            Export(xmlFileAdress,xmlFileAddressName.ToString());
                                 break;
                             }
                         case 8:
                             {
-                                Import();
+                            Console.WriteLine("请输入.xml文件路径");
+                            string FileAdrssion = Console.ReadLine();
+                            Console.WriteLine("请输入.xml文件名称");
+                            string FileName = Console.ReadLine();
+                            StringBuilder FileAdreeName = new StringBuilder();
+                            FileAdreeName.Append(FileAdrssion);
+                            FileAdreeName.Append("\\");
+                            FileAdreeName.Append(FileName);
+                            Import(FileAdrssion,FileAdreeName.ToString());
                                 break;
                             }
                         case 0:
