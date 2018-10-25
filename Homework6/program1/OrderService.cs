@@ -86,7 +86,8 @@ namespace program1
         {
             foreach (Order n in search)
             {
-                foreach (OrderDetails m in n.Items)
+                var search2 = n.Items.Where(k => k.Product == product);
+                foreach (OrderDetails m in search2)
                 {
                     n.Items.Remove(m);
                     break;
