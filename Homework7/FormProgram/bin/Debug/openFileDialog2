@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Order>
+    <Name>yxl</Name>
+    <Clent>1</Clent>
+    <Items />
+  </Order>
+  <Order>
+    <Name>hjy</Name>
+    <Clent>2</Clent>
+    <Items>
+      <OrderDetails>
+        <Num>1</Num>
+        <Product>computer</Product>
+        <Price>5599</Price>
+      </OrderDetails>
+    </Items>
+  </Order>
+</ArrayOfOrder>
