@@ -1,0 +1,38 @@
+/* pages/welcome/welcome.wxss */
+.user-avatar{
+  width: 200rpx;
+  height: 200rpx;
+  align-items: center;
+  margin-top: 200rpx;
+   overflow:hidden;
+  border-radius:50%;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-name{
+  font-size:32rpx;
+  font-weight: bold;
+  margin-top: 100rpx;
+}
+.moto{
+  border: 1px solid #405f80;
+  width: 200rpx;
+  height: 80rpx;
+  margin-top: 300rpx;
+  border-radius: 5px;
+  text-align: center;
+}
+.motor{
+  font-size: 22rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+  background-color: #b3d4db;
+  
+}
+page{
+  height: 100%;
+  background-color: #b3d4db;
+}

@@ -1,0 +1,49 @@
+<!--pages/text/text.wxml-->
+<view class = "pic">
+<image src="../../photo/text2.png" mode="widthFix" > </image>
+</view>
+
+<view class= "topview" style="flex-direction:row;">
+<view class="topdate1">{{year}}年</view>
+<view class="topdate">{{month}}月</view>
+<view class="topdate">{{day}}日</view>
+</view>
+
+<view class="text_1"  style="flex-direction:row;" >
+  <view class="date">{{date[0]}}<text></text></view>
+  <view class="font" ><text class="mood">{{mood[0]}}\n</text><text class="things">{{things[0]}}</text></view>
+</view>
+<view class="text_1"  style="flex-direction:row;" >
+  <view class="date">{{date[1]}}<text></text></view>
+  <view class="font" ><text class="mood">{{mood[1]}}\n</text><text class="things">{{things[1]}}</text></view>
+</view>
+<view class="text_1"  style="flex-direction:row;" >
+  <view class="date">{{date[2]}}<text></text></view>
+  <view class="font" ><text class="mood">{{mood[2]}}\n</text><text class="things">{{things[2]}}</text></view>
+</view>
+<view class="text_1"  style="flex-direction:row;" >
+  <view class="date">{{date[3]}}<text></text></view>
+  <view class="font" ><text class="mood">{{mood[3]}}\n</text><text class="things">{{things[3]}}</text></view>
+</view>
+<view class="text_1"  style="flex-direction:row;" >
+  <view class="date">{{date[4]}}<text></text></view>
+  <view class="font" ><text class="mood">{{mood[4]}}\n</text><text class="things">{{things[4]}}</text></view>
+</view>
+<view class="text_1"  style="flex-direction:row;" >
+  <view class="date">{{date[5]}}<text></text></view>
+  <view class="font" ><text class="mood">{{mood[5]}}\n</text><text class="things">{{things[5]}}</text></view>
+</view>
+<view class="text_1"  style="flex-direction:row;" >
+  <view class="date">{{date[6]}}<text></text></view>
+  <view class="font" ><text class="mood">{{mood[6]}}\n</text><text class="things">{{things[6]}}</text></view>
+</view>
+<view class="text_1"  style="flex-direction:row;" >
+  <view class="date">{{date[7]}}<text></text></view>
+  <view class="font" ><text class="mood">{{mood[7]}}\n</text><text class="things">{{things[7]}}</text></view>
+</view>
+
+<view class="moto" bindtap="onTap" >
+  <text class="motor">开启足迹之旅</text> 
+</view>
+
+

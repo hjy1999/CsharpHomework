@@ -1,0 +1,67 @@
+/* pages/math/math.wxss */
+.user-name{
+  font-size:40rpx;
+  font-weight: bold;
+}
+.user-avatar{
+  margin-left: 50rpx;
+  overflow:hidden;
+  border-radius:50%;
+  width: 150rpx;
+  height: 150rpx;
+
+}
+.container{
+  background-color: #daebf6;
+   border-radius: 5px; 
+  border: 1px solid #d0d0d0;
+  width: 750rpx;
+ height: 250rpx;
+ display: flex;
+ align-items: center;
+}
+.topname{
+  margin-left: 40rpx;
+}
+.namebottom{
+  font-size: 30rpx;
+}
+.math2{
+  border-radius: 5px; 
+  border: 1px solid #d0d0d0;
+  width: 750rpx;
+  height: 100rpx;
+  line-height:100rpx;
+  font-size: 35rpx;
+  background-color: #f9fbea;
+}
+.text2{
+  margin-left: 40rpx;
+}
+.view3{
+  margin-top: 10rpx;
+  border-radius: 5px; 
+  border: 1px solid #d0d0d0;
+  width: 750rpx;
+  height: 300rpx;
+  background-color: #daebf6;
+}
+.view3_1{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.view3_2{
+  margin-left: 20rpx;
+}
+.view4{
+  margin-top: 10rpx;
+  border-radius: 5px; 
+  border: 1px solid #d0d0d0;
+  width: 750rpx;
+  height: 420rpx;
+  background-color: #f9fbea;
+}
+.view4_1{
+  margin-left:30rpx;
+  margin-top:20rpx;
+}

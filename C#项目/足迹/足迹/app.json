@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/posts/post",
+    "pages/text/text",
+    "pages/math/math",
+    "pages/intext/text"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#b3d4db"
+  },
+  "tabBar": {
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/text/text",
+        "iconPath": "photo/text.png",
+        "selectedIconPath": "photo/text.png"
+      },
+      {
+        "pagePath": "pages/posts/post",
+        "iconPath": "photo/map.png",
+        "selectedIconPath": "photo/map.png"
+      },
+      {
+        "pagePath": "pages/math/math",
+        "iconPath": "photo/math.png",
+        "selectedIconPath": "photo/math.png"
+      }
+    ]
+  }
+}

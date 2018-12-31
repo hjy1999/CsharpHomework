@@ -1,0 +1,20 @@
+<!--pages/intext/text.wxml-->
+<view class="localtitle">打卡地点：{{locatitle}}</view>
+<view class = "pic">
+<image src="../../photo/bg1.png" mode="widthFix" > </image>
+</view>
+<view class="page-section">
+    <view class="page-section-title">讲讲你的心情:</view>
+    <view class="textarea-wrp">
+      <textarea bindblur="bindTextAreaBlur" auto-height />
+    </view>
+  </view>     
+  <view class="page-section">
+    <view class="page-section-title">告诉我你的故事：</view>
+    <view class="textarea-wrp">
+      <textarea bindblur="bindTextAreaBlu" auto-height />
+    </view>
+  </view>
+<view class="button1" >
+  <button bindtap='back'>提交</button>
+</view>

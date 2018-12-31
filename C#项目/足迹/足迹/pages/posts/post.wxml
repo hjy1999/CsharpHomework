@@ -1,0 +1,28 @@
+<view class ="first">
+  <view class="section"> 
+  <input placeholder="输入关键字" auto-focus type="text" bindinput="bindKeyInput"/> 
+  </view>
+  <view class="text1" bindtap='search'>搜  索</view>
+
+</view>
+ 
+<view class="map_container"> 
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+</view> 
+<view class="place_info"> 
+  <text>{{placeData.title}}</text> 
+  <text>{{placeData.address}}</text> 
+  <text>{{placeData.telephone}}</text> 
+</view> 
+<view class="menu1">
+  <view class="weather"> 
+    <text>{{weatherData}}</text> 
+  </view>
+    <view  class="text2" >
+      <text>今日步数: {{step}}</text>
+      <image class="menu" src="../../photo/menu.png" bindtap='gogogo' > </image>
+    </view>
+</view>
+<!-- <block  wx:for="{{markers}}">
+<view>{{item}}</view>
+</block> -->

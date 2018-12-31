@@ -1,0 +1,110 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.1",
+	"appid": "wx69177063b119614a",
+	"projectname": "%E8%B6%B3%E8%BF%B9",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 10,
+			"list": [
+				{
+					"id": -1,
+					"name": "erweima",
+					"pathName": "pages/index/index",
+					"query": "name=erweima&",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "join",
+					"pathName": "pages/join/join",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "logs",
+					"pathName": "pages/logs/logs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "map",
+					"pathName": "pages/map/map",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "5",
+					"pathName": "pages/welcome/welcome",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "1",
+					"pathName": "pages/text/text",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "1",
+					"pathName": "pages/posts/post",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "math",
+					"pathName": "pages/math/math",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "text",
+					"pathName": "pages/text/text",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "intext",
+					"pathName": "pages/intext/text",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dsaada",
+					"pathName": "pages/intext/text"
+				}
+			]
+		}
+	}
+}

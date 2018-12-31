@@ -1,0 +1,54 @@
+/* pages/text/text.wxss */
+.section{
+  height: 970rpx;
+}
+.topview{
+  display: flex;
+  
+}
+.topdate{
+  background-color: #f5f9a9;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px; 
+  width: 100rpx;
+}
+.topdate1{
+  margin-left: 170rpx;
+  background-color: #f5f9a9;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px; 
+  width: 150rpx;
+}
+.pic{
+  height: 10rpx;
+  width: 100%;
+}
+.text_1{
+  margin-top: 10rpx;
+  border-radius: 5px; 
+  border: 1px solid #d0d0d0;
+  width: 740rpx;
+  height: 150rpx;
+  display: flex;
+}
+.date{
+  font-size: 70rpx;
+  margin-top: 25rpx;
+  font-style: italic;
+  font-weight: 100;
+  
+}
+.mood{
+
+  font-size: 50rpx;
+}
+.things{
+  
+  font-size :30rpx;
+}
+.font{
+  margin-top: 15rpx;
+  margin-left: 50rpx;
+}

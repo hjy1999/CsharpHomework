@@ -1,0 +1,14 @@
+<!--pages/welcome/welcome.wxml-->
+<!-- <view class = "pic">
+<image src="../../photo/start.png" mode="widthFix" > </image>
+</view> -->
+<view class='container'>
+
+ <open-data class="user-avatar" type="userAvatarUrl"></open-data>
+ <open-data class="user-name"  type = "userNickName"></open-data >
+ 
+ <view class="moto" bindtap="onTap" >
+  <text class="motor">开启足迹之旅</text> 
+</view>
+</view>
+

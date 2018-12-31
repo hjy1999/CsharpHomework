@@ -1,0 +1,20 @@
+<!--pages/math/math.wxml-->
+<view class='container'>
+  <view class="user-avatar">
+   <open-data  type="userAvatarUrl"></open-data></view>
+ <view class="topname"><open-data class="user-name"  type = "userNickName"></open-data >
+ <text class="namebottom">\n轻旅行家</text>
+ <text class="namebottom"> \n{{logintimes}}天、打卡{{areas}}地点</text>
+ </view>
+ </view>
+ <view class="math2"><text class="text2">最常去的地点是：{{alarea}}</text></view>
+ <view class='view3'>
+ <view class="view3_1"><text>我已经去过{{citys}}城市、{{country}}个国家啦！</text></view>
+ <view class="view3_1"><text>美食：{{foods}}个地点</text></view>
+ <view class="view3_2"><text>风景：{{sceneries}}个地点</text></view>
+ <view class="view3_2"><text>游乐：{{palyareas}}个地点</text></view>
+ <view class="view3_2"><text>商场：{{markets}}个地点</text></view>
+ </view>
+ <view class="view4">
+ <view class="view4_1"><text>{{suggestion}}</text></view>
+ </view>
